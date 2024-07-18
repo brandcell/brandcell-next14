@@ -23,13 +23,18 @@ export default function RootLayout({
 
       <body className={`${manrope.className}`}>
 
-        <Navbar />
 
-        {children}
+        <Navbar />
+        <div id="padding-provider" className="px-3 max-w-screen-xl m-auto">
+          {children}
+        </div>
+
+
 
         <Footer />
 
       </body>
+
 
 
     </html>

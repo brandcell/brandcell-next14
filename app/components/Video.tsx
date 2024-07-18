@@ -1,10 +1,10 @@
 type Props = {
-    id: string
-}
+    id: string;
+};
 
 export default function Video({ id }: Props) {
     return (
-        <div className="aspect-w-16 aspect-h-9">
+        <div className="aspect-h-9 aspect-w-16">
             <iframe
                 src={`https://www.youtube.com/embed/${id}`}
                 title="YouTube video player"

@@ -1,10 +1,11 @@
 async function getUserPosts(userId: string) {
+  const res = await fetch(
+    `https://jsonplaceholder.typicode.com/posts?userId=${userId}`,
+  );
 
-    const res = await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`)
+  if (!res.ok) "";
 
-    if (!res.ok) ''
-
-    return res.json()
+  return res.json();
 }
 
-export default getUserPosts
+export default getUserPosts;

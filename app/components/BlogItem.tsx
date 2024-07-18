@@ -15,10 +15,10 @@ export default function BlogItem({ post }: Props) {
     const formattedDate = getFormattedDate(date)
 
     return (
-        <div className="mt-4 text-2xl text-black rounded-[24px] border-[1px] p-2 ">
+        <div className="mt-4 text-2xl font-medium text-black rounded-[24px] border-[1px] p-2 ">
             <Link href={`/blog/${id}`}>
 
-                <div className="w-full h-[290px]"><Image className="w-full h-full rounded-[17px]" width={500} height={200} alt={`blog-${id}-cover`} src={cover} /></div>
+                <div className="h-[290px] relative w-full"><Image className=" h-full object-cover rounded-[17px]" layout="responsive" width={500} height={200} alt={`blog-${id}-cover`} src={cover} /></div>
 
 
                 <div className="p-4 flex flex-col gap-6">

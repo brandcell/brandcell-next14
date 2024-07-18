@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Posts from "./components/Posts";
+import Services from "./components/Services";
 
 
 export const revalidate = 10
@@ -12,16 +13,19 @@ export default function Home() {
 
       <div id="hero" className="flex flex-col-reverse md:flex-row md:py-20 justify-between">
 
-        <div id="hero-left" className="flex flex-col md:max-w-[50%] items-start gap-y-5">
-          <h1 className="text-4xl lg:text-5xl font-bold">Supercharge Your <br /><span className="text-bc-red">E-Commerce </span>Store With Us</h1>
+        <div id="hero-left" className="flex flex-col md:max-w-[50%]">
+          <div className="flex flex-col gap-y-6 items-start">
+            <h1 className="text-4xl lg:text-5xl lg:leading-tight font-bold">Supercharge Your <br /><span className="text-bc-red">E-Commerce </span>Store With Us</h1>
 
-          <h2>Systematically grow your e-commerce business with done-for-you e-commerce marketing services including social-media advertising, conversion-rate optimisation and ecommerce web design & development.
+            <h2 className="text-2xl font-medium">Done-for-you e-commerce marketing services including social-media advertising, conversion-rate optimisation and Shopify store design & development.
 
-          </h2>
-          <button>Get Free Site Audit</button>
+            </h2>
+            <button>Get Free Site Audit</button>
+          </div>
 
-          <div className="">
-            <h4>A Member of</h4>
+
+          <div className="justify-self-end mt-auto">
+            <h4 className="text-xl font-medium mb-4">A Member of:</h4>
             <Image alt="shopify" src="/shopify_plus.svg" width={200} height={80} />
           </div>
 
@@ -30,7 +34,7 @@ export default function Home() {
 
         <div id="hero-right" className="flex justify-center" >
           <div className="relative">
-            <Image alt="hero-ecommerce" src={'/hero-main.webp'} width={500} height={500} />
+            <Image alt="hero-ecommerce" src={'https://res.cloudinary.com/dl3rdpbpw/image/upload/v1721301969/hero-img.png'} width={500} height={500} />
 
             <div className="absolute top-0">
               <Image src={'/floater1.webp'} width={300} height={100} alt="floater-1" />
@@ -48,9 +52,11 @@ export default function Home() {
 
       </div>
 
-      <section id="frustration-section" className="md:flex justify-between">
+      <Services />
 
-        <div id="frustration-left" className="">
+      <section id="frustration-section" className="md:flex justify-between py-20">
+
+        <div id="frustration-left" className="max-w-[50%]">
 
           <div className="grid grid-cols-2 gap-4">
 
@@ -66,9 +72,9 @@ export default function Home() {
 
         </div>
 
-        <div id="frustration-right" className="md:max-w-[50%] flex flex-col items-start gap-y-8">
+        <div id="frustration-right" className="md:max-w-[50%] flex flex-col items-end gap-y-8">
 
-          <h2 className="text-5xl font-semibold"><span className="text-bc-darkblue">Feeling Uncertain</span> in Marketing? {`You're not alone!`}</h2>
+          <h2 className="text-5xl leading-snug text-right  font-semibold"><span className="text-bc-darkblue">Feeling Uncertain</span> About Marketing?</h2>
 
           <h3>Speak with us and we will help you gain more clarity on these questions</h3>
 
@@ -80,19 +86,7 @@ export default function Home() {
       </section>
 
 
-      <section id="services" className="py-20">
-        <h2 className="text-center font-semibold text-4xl mb-8">Grow Your Business with Our Expert Services</h2>
-        <div className="grid md:grid-cols-2 gap-6 ">
-          {servicesList.map((service) => {
-            return <div className="p-10 rounded-2xl bg-bc-lightblue flex flex-col items-center gap-y-4" key={service.title}>
-              <Image alt={service.imgUrl} src={service.imgUrl} width={185} height={185} />
-              <h2 className="text-2xl text-center font-semibold">{service.title}</h2>
-              <h3 className="text-[18px] text-center">{service.para}</h3>
 
-            </div>
-          })}
-        </div>
-      </section>
 
       <section id="step-by-step" className="py-20 px-14 bg-bc-beige rounded-3xl mb-[60px]">
 
@@ -165,34 +159,7 @@ const questions = [
   }
 ]
 
-const servicesList = [
-  {
-    title: 'Branding',
-    imgUrl: "/branding_vector.svg",
-    para: "Define your unique identity and story to stand out and connect.",
 
-  },
-  {
-    title: 'Social Media Advertising',
-    imgUrl: "/socmed_vector.svg",
-    para: "Create engaging ads to reach and grow your ideal audience effectively.",
-
-  },
-  {
-    title: 'Shopify Development',
-    imgUrl: "/shopify_vector.svg",
-    para: "Build and improve online stores to attract and keep customers happy.",
-
-  },
-  {
-    title: 'Website Optimisation',
-    imgUrl: "cro_vector.svg",
-    para: "Continuously enhance your website to perform better and engage more.",
-
-  },
-
-
-]
 
 const processSteps = [
   {
