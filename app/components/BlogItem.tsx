@@ -18,7 +18,7 @@ export default function BlogItem({ post }: Props) {
         <div className="mt-4 text-2xl text-black rounded-[24px] border-[1px] p-2 ">
             <Link href={`/blog/${id}`}>
 
-                <div className="w-full h-[290px] rounded-[24px] bg-bc-yellow"><Image width={auto} height={auto} alt={`blog-${id}-cover`} src={cover} /></div>
+                <div className="w-full h-[290px] rounded-[24px] bg-bc-yellow"><Image width={500} height={200} alt={`blog-${id}-cover`} src={cover} /></div>
 
 
                 <div className="p-4 flex flex-col gap-6">
