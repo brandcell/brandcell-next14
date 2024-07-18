@@ -15,15 +15,12 @@ async function Blog() {
         <h2 className="text-center text-xl">No Fluff. Tips, tricks and tactics to help you run your e-commerce store
 
         </h2></header>
-      <div className="grid grid-cols-3 gap-6">
 
-        <Posts />
 
-      </div >
+      <Posts />
 
 
 
-      <Link href={"/"}>Link to HomePage</Link>
     </>
 
   )

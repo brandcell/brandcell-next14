@@ -18,7 +18,8 @@ const config: Config = {
         'bc-darkblue':'#1A55DA',
         'bc-yellow':'#FFD748',
         'bc-lightblue':'#DAF8FF',
-        'bc-beige':"#F6F5EF"
+        'bc-beige':"#F6F5EF",
+        'bc-darkgray':'#A6A4A2'
 
       },
     },

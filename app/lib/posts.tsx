@@ -34,7 +34,7 @@ export async function getPostByName(fileName: string): Promise<BlogPost | undefi
 
     //get the frontmatter and content with the remoteMDX
 
-    const { frontmatter, content } = await compileMDX<{ title: string, date: string, tags: string[] }>({
+    const { frontmatter, content } = await compileMDX<{ title: string, date: string, tags: string[], author: string }>({
         source: rawMDX,
         components: {
             Video,
@@ -56,7 +56,7 @@ export async function getPostByName(fileName: string): Promise<BlogPost | undefi
 
     const id = fileName.replace(/\.mdx$/, '')
 
-    const blogPostObj: BlogPost = { meta: { id, title: frontmatter.title, date: frontmatter.date, tags: frontmatter.tags }, content }
+    const blogPostObj: BlogPost = { meta: { id, title: frontmatter.title, date: frontmatter.date, author: frontmatter.author, tags: frontmatter.tags }, content }
 
     return blogPostObj
 

@@ -111,14 +111,14 @@ export default function Home() {
 
       </section>
 
-      <section>
+      <section className="pb-20">
         <div className="flex justify-between"><h2 className="font-semibold text-4xl mb-8">Our Insights</h2>
 
-          <Link href={'/blog'}><button>Read Blog</button></Link>
+          <Link href={'/blog'}><button>All Articles</button></Link>
 
 
         </div>
-        <Posts />
+        <Posts numberToShow={3} />
 
       </section>
 
