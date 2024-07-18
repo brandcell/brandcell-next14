@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -11,9 +10,6 @@
   }
 } */
 
-
-
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -21,10 +17,24 @@
 }
 
 button {
-  background-color: #F76557;
+  background-color: #f76557;
   padding: 15px 25px;
   border-radius: 12px;
   border: none;
   color: white;
+}
 
+@layer components {
+  .grid-responsive {
+    @apply grid gap-4;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  /* @screen sm {
+    .grid-responsive {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 400px));
+    }
+  } */
 }

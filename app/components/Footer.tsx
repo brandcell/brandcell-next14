@@ -5,7 +5,7 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="bg-bc-darkblue px-6 py-14">
+    <div className="bg-bc-darkblue px-6 py-14 text-white">
       <div className="m-auto flex max-w-screen-xl flex-col gap-y-6">
         <div className="flex flex-wrap justify-between">
           <Image
@@ -42,6 +42,16 @@ function Footer() {
               height={38}
             ></Image>
           </div>
+        </div>
+
+        <div className="flex flex-col gap-1">
+          <h3>hello@brandcell.studio</h3>
+          <h3>+60124396912</h3>
+          <p>PG: 63, Lorong Macalister, Georgetown, 10400 Pulau Pinang</p>
+          <p>
+            KL: A-10-9, Northpoint Residences, Lingkaran Syed Putra Utara, 59200
+            Kuala Lumpur
+          </p>
         </div>
 
         <div className="text-white">
