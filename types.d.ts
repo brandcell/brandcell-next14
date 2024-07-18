@@ -35,7 +35,8 @@ type Meta = {
     date: string,
     tags: string[],
     author:string,
-    cover:string
+    cover:string,
+    minuteRead:string
 }
 
 type BlogPost = {

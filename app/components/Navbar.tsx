@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 function Navbar() {
   return (
-    <div className='p-4 flex items-center justify-between'>
+    <div className='p-4 flex z-40 relative top-0 items-center justify-between'>
       <div className="flex items-end">
         <Link href={"/"}> <Image alt='brandcell-logo' src={'/brandcell.png'} width={155} height={31} /></Link>
         <ul className='hidden sm:flex gap-5 ml-12'><Link href='/about'>About Page</Link>

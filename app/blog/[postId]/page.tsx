@@ -3,6 +3,7 @@ import { getPostsMeta, getPostByName } from "@/app/lib/posts"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import 'highlight.js/styles/github-dark.css'
+import Image from "next/image"
 
 //like setting cache to no cache 
 
@@ -63,14 +64,38 @@ export default async function Post({ params: { postId } }: Props) {
 
 
     return (
-        <>
-            <h2 className="text-3xl mt-4 mb-0">{meta.title}</h2>
-            <p className="mt-0 text-sm">
-                {pubDate}
-            </p>
-            <article>
-                {content}
-            </article>
+        <div className="relative">
+            <div className="bg-purple-100 h-[50vh] absolute top-0 left-0 w-full"></div>
+
+            <div className="pt-20 relative prose mx-auto flex flex-col items-center">
+
+                <h1 className="text-5xl mb-6 text-center mt-4  font-bold">{meta.title}</h1>
+
+                <div className="flex flex-row gap-4">
+
+                    <p className="mt-0 text-sm">
+                        By <span className="font-bold">{meta.author}</span>
+
+                    </p>
+
+
+                    <p className="mt-0 text-sm">
+                        {pubDate}
+                    </p>
+
+                    <p className="mt-0 text-sm">
+                        {meta.minuteRead} Minute Read
+                    </p>
+                </div>
+
+
+                <Image className="rounded-xl w-full" width={500} height={300} alt={`blog-${meta.id}-cover`} src={meta.cover} />
+
+                <article>
+                    {content}
+                </article>
+            </div>
+
             <section>
                 <h3>Related:</h3>
                 <div className="flex flex-row gap-4">
@@ -78,6 +103,6 @@ export default async function Post({ params: { postId } }: Props) {
                 </div>
             </section>
 
-        </>
+        </div>
     )
 }
