@@ -2,8 +2,10 @@ import Link from "next/link"
 
 import Posts from "../components/Posts"
 
+export const revalidate = 10
 
 async function Blog() {
+
 
 
   // throw new Error('not today!')
