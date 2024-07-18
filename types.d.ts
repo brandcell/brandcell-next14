@@ -34,7 +34,7 @@ type Meta = {
     title: string,
     date: string,
     tags: string[],
-    author:string
+    author:string,
     cover:string
 }
 
