@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 import getFormattedDate from "../lib/getFormattedDate"
 
@@ -9,7 +10,7 @@ type Props = {
 
 export default function BlogItem({ post }: Props) {
 
-    const { id, title, date, author } = post
+    const { id, title, date, author, cover } = post
 
     const formattedDate = getFormattedDate(date)
 
@@ -17,7 +18,7 @@ export default function BlogItem({ post }: Props) {
         <div className="mt-4 text-2xl text-black rounded-[24px] border-[1px] p-2 ">
             <Link href={`/blog/${id}`}>
 
-                <div className="w-full h-[290px] rounded-[24px] bg-bc-yellow">Image</div>
+                <div className="w-full h-[290px] rounded-[24px] bg-bc-yellow"><Image width={auto} height={auto} alt={`blog-${id}-cover`} src={cover} /></div>
 
 
                 <div className="p-4 flex flex-col gap-6">
