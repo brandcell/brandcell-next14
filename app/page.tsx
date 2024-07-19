@@ -10,13 +10,14 @@ export default function Home() {
     <div className="home-page">
       <div
         id="hero"
-        className="flex flex-col-reverse justify-between py-10 md:flex-row md:py-20"
+        className="flex flex-col-reverse justify-between gap-x-5 py-10 md:flex-row md:items-center md:py-20"
       >
         <div id="hero-left" className="flex flex-col md:max-w-[50%]">
           <div className="flex flex-col items-center gap-y-6 md:items-start">
             <h1 className="text-center text-4xl font-bold md:text-left md:text-4xl lg:text-5xl lg:leading-tight">
-              Supercharge Your <br />
-              <span className="text-bc-red">E-Commerce </span>Store With Us
+              We Build
+              <br />
+              <span className="text-bc-red">E-Commerce </span>Engines
             </h1>
 
             <h2 className="text-center text-base font-medium md:text-left xl:text-2xl">
@@ -43,7 +44,7 @@ export default function Home() {
         <div id="hero-right" className="flex justify-center">
           <div className="relative hidden md:block">
             <Image
-              className="h-[200px] w-full"
+              className="w-full"
               alt="hero-ecommerce"
               src={
                 "https://res.cloudinary.com/dl3rdpbpw/image/upload/v1721301969/hero-img.png"
@@ -77,7 +78,7 @@ export default function Home() {
 
       <section
         id="frustration-section"
-        className="justify-between py-20 md:flex"
+        className="flex flex-col justify-between gap-10 py-20 md:flex-row"
       >
         <div id="frustration-left" className="xl:max-w-[50%]">
           <div className="grid place-items-center gap-4 xl:grid-cols-2">
@@ -95,14 +96,14 @@ export default function Home() {
 
         <div
           id="frustration-right"
-          className="flex flex-col items-end gap-y-8 md:max-w-[50%]"
+          className="flex flex-col items-center gap-y-8 md:max-w-[50%] md:items-end"
         >
-          <h2 className="text-right text-5xl font-semibold leading-snug">
+          <h2 className="text-center text-3xl font-semibold leading-snug md:text-right md:text-5xl">
             <span className="text-bc-darkblue">Feeling Uncertain</span> About
             Marketing?
           </h2>
 
-          <h3>
+          <h3 className="text-center md:text-left">
             Speak with us and we will help you gain more clarity on these
             questions
           </h3>
@@ -113,9 +114,9 @@ export default function Home() {
 
       <section
         id="step-by-step"
-        className="mb-[60px] rounded-3xl bg-bc-beige px-14 py-20"
+        className="mb-[60px] rounded-3xl bg-bc-beige px-14 py-12 md:py-20"
       >
-        <h2 className="mb-8 text-center text-4xl font-semibold">
+        <h2 className="mb-8 text-center text-3xl font-semibold md:text-4xl">
           The BluePrint To Success
         </h2>
 
@@ -126,7 +127,7 @@ export default function Home() {
               key={step.title}
             >
               <Image alt={step.url} src={step.url} width={90} height={90} />
-              <h3 className="max-w-[200px] text-center text-xl font-semibold">
+              <h3 className="h-[40px] max-w-[280px] text-center text-xl font-semibold md:h-[50px]">
                 {step.title}
               </h3>
               <h4>{step.para}</h4>
@@ -136,8 +137,8 @@ export default function Home() {
       </section>
 
       <section className="pb-20">
-        <div className="flex justify-between">
-          <h2 className="mb-8 text-4xl font-semibold">Our Insights</h2>
+        <div className="flex flex-row items-center justify-between">
+          <h2 className="text-3xl font-semibold md:text-4xl">Our Insights</h2>
 
           <Link href={"/blog"}>
             <button>All Articles</button>
