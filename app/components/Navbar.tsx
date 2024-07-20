@@ -4,10 +4,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 
 function Navbar() {
+  const router = useRouter();
+
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleNav = () => {
@@ -42,7 +45,7 @@ function Navbar() {
           />
         </Link>
         <ul className="ml-12 hidden gap-5 sm:flex">
-          <Link href="/about">About Page</Link>
+          <Link href="/#services">Services</Link>
           <Link href="/blog">Blog Page</Link>
           {/* <Link href='/users'>Users Page</Link> */}
         </ul>
@@ -82,21 +85,15 @@ function Navbar() {
             </Link> */}
           </ul>
         </div>
-        <button>Get Free Site Audit</button>
+
+        <button>
+          <Link href={"/contact"}>Get Free Site Audit</Link>
+        </button>
       </div>
 
-      {/* 
-      <Menu
-        customBurgerIcon={<img src="img/icon.svg" />}
-        className="bg-bc-yellow"
-        isOpen={openMenu}
-        right
-      >
-        <Link href="/about">About Page</Link>
-        <Link href="/blog">Blog Page</Link>
-   
-      </Menu> */}
-      <button className="hidden sm:block">Get Free Site Audit</button>
+      <button className="hidden sm:block">
+        <Link href={"/contact"}>Get Free Site Audit</Link>
+      </button>
     </div>
   );
 }

@@ -7,11 +7,12 @@ function Services() {
         {" "}
         Services To Help You Grow
       </h2>
-      <div className="grid-responsive mx-auto max-w-[400px] place-items-center gap-6 sm:max-w-screen-xl">
+      <div className="grid-responsive mx-auto max-w-[300px] place-items-center gap-6 sm:max-w-screen-xl">
         {servicesList.map((service) => {
           return (
             <div
-              className="flex flex-col items-center gap-y-4 rounded-2xl bg-bc-lightblue p-10"
+              id="service-card"
+              className="flex h-full flex-col items-center justify-evenly gap-y-4 rounded-2xl bg-bc-lightblue p-10"
               key={service.title}
             >
               <Image
@@ -20,7 +21,7 @@ function Services() {
                 width={185}
                 height={185}
               />
-              <div className="flex h-[80px] items-center">
+              <div className="flex items-center md:h-[80px]">
                 <h2 className="my-auto text-center text-2xl font-semibold">
                   {service.title}
                 </h2>

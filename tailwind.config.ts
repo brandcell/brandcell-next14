@@ -14,18 +14,19 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        'bc-red':'#F76557',
-        'bc-darkblue':'#1A55DA',
-        'bc-yellow':'#FFD748',
-        'bc-lightblue':'#DAF8FF',
-        'bc-beige':"#F6F5EF",
-        'bc-darkgray':'#A6A4A2'
-
+        "bc-red": "#F76557",
+        "bc-darkblue": "#1A55DA",
+        "bc-yellow": "#FFD748",
+        "bc-lightblue": "#DAF8FF",
+        "bc-beige": "#F6F5EF",
+        "bc-darkgray": "#A6A4A2",
       },
     },
   },
   plugins: [
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio')],
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/aspect-ratio"),
+  ],
 };
+
 export default config;

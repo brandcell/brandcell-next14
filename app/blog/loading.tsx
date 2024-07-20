@@ -1,8 +1,5 @@
-
 function Loading() {
-  return (
-    <div>Loading...</div>
-  )
+  return <div className="h-screen"></div>;
 }
 
-export default Loading
+export default Loading;

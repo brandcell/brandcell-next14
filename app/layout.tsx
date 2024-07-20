@@ -6,11 +6,12 @@ import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const manrope = Manrope({ subsets: ["latin"] })
+const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "BrandCell Studio - Building E-Commerce Engines",
-  description: "We are a Malaysian digital marketing agency specialising in branding, e-commerce website design and builds, Facebook ad creative testing and optimisation.",
+  description:
+    "We are a Malaysian digital marketing agency specialising in branding, e-commerce website design and builds, Facebook ad creative testing and optimisation.",
 };
 
 export default function RootLayout({
@@ -20,23 +21,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-
       <body className={`${manrope.className}`}>
-
-
         <Navbar />
-        <div id="padding-provider" className="px-3 max-w-screen-xl m-auto">
+        <div id="padding-provider" className="m-auto max-w-screen-xl px-3">
           {children}
         </div>
 
-
-
         <Footer />
-
       </body>
-
-
-
     </html>
   );
 }
