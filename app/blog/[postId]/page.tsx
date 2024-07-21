@@ -64,11 +64,11 @@ export default async function Post({ params: { postId } }: Props) {
   const tags = meta.tags;
 
   return (
-    <div className="relative">
-      <div className="absolute left-0 top-0 h-[70vh] w-full bg-purple-100"></div>
+    <>
+      <div className="relative flex flex-col items-center gap-6 pt-20">
+        <div className="absolute left-0 top-0 -z-10 h-[calc(100%-17vw)] w-full bg-purple-100"></div>
 
-      <div className="prose relative mx-auto flex flex-col items-center pt-20">
-        <h1 className="mb-6 mt-4 text-center text-5xl font-bold">
+        <h1 className="mb-6 mt-4 max-w-[90vw] text-center text-3xl font-bold lg:max-w-[50%] lg:text-5xl">
           {meta.title}
         </h1>
 
@@ -93,7 +93,7 @@ export default async function Post({ params: { postId } }: Props) {
         </div>
 
         <Image
-          className="w-full rounded-xl"
+          className="height-[50vh] mx-auto w-full rounded-xl lg:max-w-[50vw]"
           width={500}
           height={300}
           quality={100}
@@ -101,9 +101,13 @@ export default async function Post({ params: { postId } }: Props) {
           alt={`blog-${meta.id}-cover`}
           src={meta.cover}
         />
-
-        <article>{content}</article>
       </div>
-    </div>
+
+      <div>
+        <div className="prose relative mx-auto">
+          <article>{content}</article>
+        </div>
+      </div>
+    </>
   );
 }
