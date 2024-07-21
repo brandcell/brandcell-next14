@@ -52,7 +52,7 @@ export default async function TagPostList({ params: { tag } }: Props) {
     <>
       <div className="mb-5 mt-10 flex w-fit items-center gap-4">
         <h2 className="text-2xl font-semibold">Filtered By:</h2>
-        <Tag tag={tag} color></Tag>
+        <Tag tag={tag} color="bg-bc-lightblue"></Tag>
       </div>
 
       <section className="mx-auto mb-4">
