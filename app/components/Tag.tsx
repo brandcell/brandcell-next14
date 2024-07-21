@@ -6,11 +6,11 @@ interface TagProps {
 }
 const Tag: React.FC<TagProps> = ({ tag, color }) => {
   switch (tag) {
-    case "e-commmerce":
+    case "e-commerce":
       color = "bg-bc-red";
       break;
 
-    case "UI/UX":
+    case "UX":
       color = "bg-bc-yellow";
       break;
 
