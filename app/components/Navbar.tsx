@@ -46,7 +46,7 @@ function Navbar() {
         </Link>
         <ul className="ml-12 hidden gap-5 sm:flex">
           <Link href="/#services">Services</Link>
-          <Link href="/blog">Blog Page</Link>
+          <Link href="/blog">Blog</Link>
           {/* <Link href='/users'>Users Page</Link> */}
         </ul>
       </div>

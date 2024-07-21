@@ -16,43 +16,56 @@ function Footer() {
           />
 
           <div id="socials-bar" className="flex gap-5">
-            <Image
-              alt="linkedin-logo"
-              src={"/soc1.svg"}
-              width={38}
-              height={38}
-            ></Image>
-            <Image
+            <a href="https://www.instagram.com/brandcell.studio/">
+              <Image
+                alt="ig-logo"
+                src={"/soc4.svg"}
+                width={38}
+                height={38}
+              ></Image>
+            </a>
+
+            <a href="https://www.linkedin.com/company/brandcell-studio/">
+              <Image
+                alt="linkedin-logo"
+                src={"/soc1.svg"}
+                width={38}
+                height={38}
+              ></Image>
+            </a>
+
+            {/* <Image
               alt="x-logo"
               src={"/soc2.svg"}
               width={38}
               height={38}
-            ></Image>
-
-            <Image
-              alt="fb-logo"
-              src={"/soc3.svg"}
-              width={38}
-              height={38}
-            ></Image>
-            <Image
-              alt="ig-logo"
-              src={"/soc4.svg"}
-              width={38}
-              height={38}
-            ></Image>
+            ></Image> */}
+            <a href="https://www.facebook.com/BrandCell.Studio">
+              <Image
+                alt="fb-logo"
+                src={"/soc3.svg"}
+                width={38}
+                height={38}
+              ></Image>
+            </a>
           </div>
         </div>
 
-        <div className="flex flex-col gap-1">
-          <h3>hello@brandcell.studio</h3>
-          <h3>+60124396912</h3>
+        <address className="flex flex-col gap-1 normal-case">
+          <h3>
+            <a href="mailto:hello@brandcell.studio">hello@brandcell.studio</a>
+          </h3>
+          <h3>
+            <a href="https://web.whatsapp.com/send/?phone=60124396912&text&type=phone_number&app_absent=0+60124396912">
+              +60124396912
+            </a>
+          </h3>
           <p>PG: 63, Lorong Macalister, Georgetown, 10400 Pulau Pinang</p>
           <p>
             KL: A-10-9, Northpoint Residences, Lingkaran Syed Putra Utara, 59200
             Kuala Lumpur
           </p>
-        </div>
+        </address>
 
         <div className="text-white">
           Copyright © {currentYear} BrandCell Studio. All Rights Reserved
