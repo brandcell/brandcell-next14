@@ -16,7 +16,10 @@ function Footer() {
           />
 
           <div id="socials-bar" className="flex gap-5">
-            <a href="https://www.instagram.com/brandcell.studio/">
+            <a
+              href="https://www.instagram.com/brandcell.studio/"
+              target="_blank"
+            >
               <Image
                 alt="ig-logo"
                 src={"/soc4.svg"}
@@ -25,7 +28,10 @@ function Footer() {
               ></Image>
             </a>
 
-            <a href="https://www.linkedin.com/company/brandcell-studio/">
+            <a
+              href="https://www.linkedin.com/company/brandcell-studio/"
+              target="_blank"
+            >
               <Image
                 alt="linkedin-logo"
                 src={"/soc1.svg"}
@@ -40,7 +46,7 @@ function Footer() {
               width={38}
               height={38}
             ></Image> */}
-            <a href="https://www.facebook.com/BrandCell.Studio">
+            <a href="https://www.facebook.com/BrandCell.Studio" target="_blank">
               <Image
                 alt="fb-logo"
                 src={"/soc3.svg"}
