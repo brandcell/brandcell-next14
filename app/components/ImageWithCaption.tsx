@@ -13,9 +13,20 @@ const ImageWithCaption: React.FC<ImageWithCaptionProps> = ({
   caption,
 }) => {
   return (
-    <figure className="relative flex flex-col items-center">
-      <Image fill src={src} alt={alt} className="h-auto max-w-full" />
-      <figcaption className="mt-2 text-sm text-gray-600">{caption}</figcaption>
+    <figure className="flex flex-col items-center">
+      <Image
+        objectFit="contain"
+        width={400}
+        height={400}
+        quality={100}
+        className="w-full"
+        src={src}
+        alt={alt}
+      />
+
+      <figcaption className="mt-2 text-sm italic text-gray-600">
+        {caption}
+      </figcaption>
     </figure>
   );
 };
