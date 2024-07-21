@@ -38,7 +38,7 @@ async function Blog() {
         <div className="flex flex-wrap gap-4">
           {tagList.map((tag) => (
             <Link key={tag} href={`/tags/${tag}`} className="">
-              <Tag color="" tag={tag}></Tag>
+              <Tag color="bg-bc-lightblue" tag={tag}></Tag>
             </Link>
           ))}
         </div>
