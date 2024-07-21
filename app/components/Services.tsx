@@ -52,11 +52,11 @@ const servicesList = [
   {
     title: "Shopify Development",
     imgUrl: "/shopify_vector.svg",
-    para: "Build and improve online stores to attract and keep customers happy.",
+    para: "Build attractive stores that customers love",
   },
   {
-    title: "Website Optimisation",
+    title: "Conversion Optimisation",
     imgUrl: "cro_vector.svg",
-    para: "Continuously enhance your website to perform better and engage more.",
+    para: "Continuously improve the conversion rate of your website",
   },
 ];
