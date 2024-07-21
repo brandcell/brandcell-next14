@@ -10,8 +10,16 @@ const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "BrandCell Studio - Building E-Commerce Engines",
-  description:
-    "We are a Malaysian digital marketing agency specialising in branding, e-commerce website design and builds, Facebook ad creative testing and optimisation.",
+  keywords: [
+    "Conversion Rate Optimisation, Shopify Development, Shopify Migration, Magento Migration to Shopify, Fb Ad Agency, e-commerce agency",
+  ],
+  openGraph: {
+    description:
+      "We are a Malaysian digital marketing agency specialising in branding, Shopify website design and development, performance marketing and conversion-rate optimisation.",
+    images: [
+      "https://res.cloudinary.com/dl3rdpbpw/image/upload/v1721576957/opengraph_r3r1wq.png",
+    ],
+  },
 };
 
 export default function RootLayout({

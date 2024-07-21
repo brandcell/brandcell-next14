@@ -5,6 +5,7 @@ import Link from "next/link";
 import "highlight.js/styles/github-dark.css";
 import Image from "next/image";
 import Tag from "@/app/components/Tag";
+import { describe } from "node:test";
 
 //like setting cache to no cache
 
@@ -34,10 +35,17 @@ export async function generateMetadata({ params: { postId } }: Props) {
   if (!post) {
     return {
       title: "Post Not Found!",
+      description: "The page you are looking for does not exist!",
     };
   }
 
-  return { title: post.meta.title };
+  return {
+    openGraph: {
+      title: post.meta.title,
+      description: `This is the blog for ${post.meta.title}`,
+      images: [post.meta.cover],
+    },
+  };
 }
 
 //there is a params object it is an object {params:postId}, we destructure the post id out of the params object
