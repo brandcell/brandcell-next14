@@ -1,6 +1,10 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
-function FormLayout({ children }) {
+interface FormLayoutProps {
+  children: ReactNode;
+}
+
+function FormLayout({ children }: FormLayoutProps) {
   return (
     <div className="py-6 md:py-10">
       <header className="py-6 md:py-10">
