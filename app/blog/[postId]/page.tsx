@@ -78,7 +78,7 @@ export default async function Post({ params: { postId } }: Props) {
           <div className="flex flex-wrap gap-4">
             {tags.map((tag) => (
               <Link key={tag} href={`/tags/${tag}`} className="">
-                <Tag color tag={tag}></Tag>
+                <Tag color="bg-bc-lightblue" tag={tag}></Tag>
               </Link>
             ))}
           </div>
