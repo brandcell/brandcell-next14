@@ -1,7 +1,10 @@
-import Link from "next/link";
 import React from "react";
 
-function Tag({ tag, color }) {
+interface TagProps {
+  tag: string;
+}
+const Tag: React.FC<TagProps> = ({ tag }) => {
+  let color: string;
   switch (tag) {
     case "e-commmerce":
       color = "bg-bc-red";
@@ -26,6 +29,6 @@ function Tag({ tag, color }) {
       </div>
     </div>
   );
-}
+};
 
 export default Tag;
