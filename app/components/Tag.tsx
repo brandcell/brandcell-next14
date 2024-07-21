@@ -2,9 +2,9 @@ import React from "react";
 
 interface TagProps {
   tag: string;
+  color: string;
 }
-const Tag: React.FC<TagProps> = ({ tag }) => {
-  let color: string;
+const Tag: React.FC<TagProps> = ({ tag, color }) => {
   switch (tag) {
     case "e-commmerce":
       color = "bg-bc-red";
