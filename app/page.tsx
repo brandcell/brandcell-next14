@@ -2,81 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import Posts from "./components/Posts";
 import Services from "./components/Services";
+import HeroSection from "./components/HeroSection";
 
 export const revalidate = 10;
 
 export default function Home() {
   return (
     <div className="home-page">
-      <div
-        id="hero"
-        className="flex flex-col-reverse justify-between gap-x-5 py-10 md:flex-row md:py-20"
-      >
-        <div id="hero-left" className="flex flex-col md:max-w-[50%]">
-          <div className="flex flex-col items-center gap-y-6 md:items-start">
-            <h1 className="text-center text-4xl font-bold md:text-left md:text-4xl lg:text-5xl lg:leading-tight">
-              We help build profitable
-              <br />
-              <span className="text-bc-red">E-Commerce </span>
-              engines
-            </h1>
-
-            <h2 className="max-w-[75%] text-center text-base font-medium md:text-left xl:text-xl">
-              Managed performance marketing, <br />
-              conversion-rate optimisation and Shopify development for small
-              businesses.
-            </h2>
-            <button>
-              <Link href={"/contact"}>Check Your E-Commerce Site Health</Link>
-            </button>
-          </div>
-
-          <div className="mt-auto self-center justify-self-end py-5 md:self-start">
-            <h4 className="mb-4 hidden font-medium md:block md:text-xl">
-              A Member of:
-            </h4>
-            <Image
-              alt="shopify"
-              src="/shopify_plus.svg"
-              width={200}
-              height={80}
-            />
-          </div>
-        </div>
-
-        <div id="hero-right" className="flex justify-center">
-          <div className="relative hidden md:block">
-            <Image
-              className="max-h-[500px] w-full"
-              alt="hero-ecommerce"
-              src={
-                "https://res.cloudinary.com/dl3rdpbpw/image/upload/v1721301969/hero-img.png"
-              }
-              width={500}
-              height={500}
-            />
-
-            <div className="absolute top-0">
-              <Image
-                src={"/floater1.webp"}
-                width={300}
-                height={100}
-                alt="floater-1"
-              />
-            </div>
-
-            <div className="absolute top-14">
-              <Image
-                src={"/floater2.webp"}
-                width={300}
-                height={100}
-                alt="floater-1"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <HeroSection />
       <Services />
 
       <section
@@ -155,7 +88,7 @@ export default function Home() {
           <h2 className="text-3xl font-semibold md:text-4xl">Our Insights</h2>
 
           <Link href={"/blog"}>
-            <button>All Articles</button>
+            <button className="transition hover:scale-105">All Articles</button>
           </Link>
         </div>
         <Posts numberToShow={3} />

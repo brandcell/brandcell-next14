@@ -45,8 +45,12 @@ function Navbar() {
           />
         </Link>
         <ul className="ml-12 hidden gap-5 sm:flex">
-          <Link href="/#services">Services</Link>
-          <Link href="/blog">Blog</Link>
+          <Link className="transition-all hover:underline" href="/#services">
+            Services
+          </Link>
+          <Link className="transition-all hover:underline" href="/blog">
+            Blog
+          </Link>
           {/* <Link href='/users'>Users Page</Link> */}
         </ul>
       </div>
@@ -86,12 +90,12 @@ function Navbar() {
           </ul>
         </div>
 
-        <button>
+        <button className="transition hover:scale-105">
           <Link href={"/contact"}>Get Free Site Audit</Link>
         </button>
       </div>
 
-      <button className="hidden sm:block">
+      <button className="hidden transition hover:scale-105 sm:block">
         <Link href={"/contact"}>Get Free Site Audit</Link>
       </button>
     </div>
