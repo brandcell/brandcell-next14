@@ -32,7 +32,7 @@ function HeroSection() {
     >
       <div id="hero-left" className="flex flex-col md:max-w-[50%]">
         <div className="flex flex-col items-center gap-y-6 md:items-start">
-          <h1 className="text-center text-4xl font-bold md:text-left md:text-4xl lg:text-5xl lg:leading-tight">
+          <h1 className="text-center text-4xl font-bold capitalize md:text-left md:text-4xl lg:text-5xl lg:leading-tight">
             We help build profitable
             <br />
             <span className="text-bc-red">E-Commerce </span>
