@@ -3,6 +3,7 @@ import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -48,6 +49,7 @@ export default function RootLayout({
           href="favicon_io/favicon-16x16.png"
         />
         <link rel="manifest" href="favicon_io/site.webmanifest"></link>
+        <GoogleTagManager gtmId="GTM-T9SPZ95F" />
       </head>
       <body className={`${manrope.className}`}>
         <Navbar />
