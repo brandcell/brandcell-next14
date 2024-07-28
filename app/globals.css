@@ -70,3 +70,13 @@ button:focus {
 address {
   font-style: normal;
 }
+
+article h2 a {
+  color: #1a55da !important;
+  text-decoration: none !important;
+}
+
+article h3 a {
+  color: #1a55da !important;
+  text-decoration: none !important;
+}
