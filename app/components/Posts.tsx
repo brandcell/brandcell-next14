@@ -3,10 +3,11 @@ import BlogItem from "./BlogItem";
 
 // Define the type for the props
 type PostsProps = {
-  numberToShow?: number; // Make the prop optional
+  numberToShow?: number;
+  filterUrl: any; // Make the prop optional
 };
 
-export default async function Posts({ numberToShow }: PostsProps) {
+export default async function Posts({ numberToShow, filterUrl }: PostsProps) {
   // Fetch the posts metadata
   const posts = await getPostsMeta();
 
@@ -15,7 +16,7 @@ export default async function Posts({ numberToShow }: PostsProps) {
   }
 
   // Determine the number of posts to show
-  const postsToShow = numberToShow ? posts.slice(0, numberToShow) : posts;
+  let postsToShow = numberToShow ? posts.slice(0, numberToShow) : posts;
 
   return (
     <section>

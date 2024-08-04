@@ -6,6 +6,7 @@ import "highlight.js/styles/github-dark.css";
 import Image from "next/image";
 import Tag from "@/app/components/Tag";
 import { describe } from "node:test";
+import Posts from "@/app/components/Posts";
 
 //like setting cache to no cache
 
@@ -103,11 +104,23 @@ export default async function Post({ params: { postId } }: Props) {
         />
       </div>
 
-      <div>
+      <div className="pb-20">
         <div className="prose relative mx-auto">
           <article>{content}</article>
         </div>
       </div>
+      <section className="pb-20">
+        <div className="mb-6 flex flex-row items-center justify-between">
+          <h2 className="text-2xl font-semibold md:text-4xl">
+            Continue Reading
+          </h2>
+
+          <Link href={"/blog"}>
+            <button className="transition hover:scale-105">All Articles</button>
+          </Link>
+        </div>
+        <Posts numberToShow={3} />
+      </section>
     </>
   );
 }
