@@ -4,10 +4,10 @@ import BlogItem from "./BlogItem";
 // Define the type for the props
 type PostsProps = {
   numberToShow?: number;
-  filterUrl: any; // Make the prop optional
+  // filterUrl: any; // Make the prop optional
 };
 
-export default async function Posts({ numberToShow, filterUrl }: PostsProps) {
+export default async function Posts({ numberToShow }: PostsProps) {
   // Fetch the posts metadata
   const posts = await getPostsMeta();
 
