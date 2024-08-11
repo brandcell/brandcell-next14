@@ -44,34 +44,44 @@ function Contact() {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      ref={form}
-      className="mx-auto flex max-w-[500px] flex-col gap-y-6 rounded-xl p-10 shadow-xl"
-    >
-      <label>
-        <span>Name</span>
-        <input required type="text" id="from_name" name="from_name" />
-      </label>
+    <div className="py-6 md:py-10">
+      <header className="py-6 md:py-10">
+        <h1 className="mb-2 text-center text-3xl font-semibold md:mb-8 md:text-5xl">
+          Let Us Know Your <span className="text-bc-darkblue">Needs</span>
+        </h1>
+        <h2 className="text-center text-sm md:text-xl">
+          We will get back to you within 24 hours
+        </h2>
+      </header>
+      <form
+        onSubmit={handleSubmit}
+        ref={form}
+        className="mx-auto flex max-w-[500px] flex-col gap-y-6 rounded-xl p-10 shadow-xl"
+      >
+        <label>
+          <span>Name</span>
+          <input required type="text" id="from_name" name="from_name" />
+        </label>
 
-      <label>
-        <span>Email</span>
-        <input required type="email" id="email" name="user_email" />
-      </label>
+        <label>
+          <span>Email</span>
+          <input required type="email" id="email" name="user_email" />
+        </label>
 
-      <label>
-        <span>Phone</span>
-        <input type="tel" id="phone_number" name="phone_number" />
-      </label>
-      <label>
-        <span>How Can We Help?</span>
-        <textarea id="message" name="message" />
-      </label>
+        <label>
+          <span>Phone</span>
+          <input type="tel" id="phone_number" name="phone_number" />
+        </label>
+        <label>
+          <span>How Can We Help?</span>
+          <textarea id="message" name="message" />
+        </label>
 
-      <button type="submit" disabled={isLoading}>
-        {isLoading ? <span>Adding..</span> : "Submit"}
-      </button>
-    </form>
+        <button type="submit" disabled={isLoading}>
+          {isLoading ? <span>Adding..</span> : "Submit"}
+        </button>
+      </form>
+    </div>
   );
 }
 
