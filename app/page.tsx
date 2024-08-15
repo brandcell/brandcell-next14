@@ -21,7 +21,7 @@ export default function Home() {
           Marketing?
         </h2>
 
-        <Link href={"/"}>Bugs Test</Link>
+        {/* <Link href={"/"}>Bugs Test</Link> */}
 
         <div id="frustration-left" className="xl:max-w-[50%]">
           <div className="frustration-grid grid place-items-center gap-4 xl:grid-cols-2">
