@@ -85,3 +85,26 @@ article h4 a {
   color: #1a55da !important;
   text-decoration: none !important;
 }
+
+.circle-container {
+  position: relative;
+  width: 220px; /* Enough to accommodate the large circle and space around */
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.large-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.small-circle {
+  position: absolute;
+  top: 20%; /* Adjust this value for radial positioning */
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

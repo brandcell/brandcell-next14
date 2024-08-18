@@ -63,13 +63,60 @@ export default function Home() {
 
       <section
         id="step-by-step"
-        className="mb-[60px] rounded-3xl bg-bc-beige px-14 py-12 md:py-20"
+        className="mb-[60px] rounded-3xl py-12 md:px-14 md:py-20"
       >
         <h2 className="mb-8 text-center text-3xl font-semibold md:text-4xl">
           The BluePrint To Success
         </h2>
 
-        <div className="mx-auto grid max-w-[300px] place-items-start gap-8 sm:max-w-full sm:grid-cols-3">
+        <video
+          autoPlay={true}
+          className="m-auto h-[90%] w-[90%]"
+          src="/process-vid.mp4"
+        ></video>
+
+        {/* <div className="circle-container">
+          <svg
+            className="large-circle"
+            width="603"
+            height="602"
+            viewBox="0 0 603 602"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="301.109"
+              cy="301"
+              r="299.5"
+              stroke="#78B5FF"
+              stroke-opacity="0.2"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-dasharray="12 12"
+            />
+          </svg>
+
+          <svg
+            className="small-circle"
+            width="300"
+            height="300"
+            viewBox="0 0 514 513"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="256.609"
+              cy="256.5"
+              r="255"
+              stroke="#78B5FF"
+              stroke-opacity="0.4"
+              stroke-width="3"
+              stroke-dasharray="12 12"
+            />
+          </svg>
+        </div> */}
+
+        {/* <div className="mx-auto grid max-w-[300px] place-items-start gap-8 sm:max-w-full sm:grid-cols-3">
           {processSteps.map((step) => (
             <div
               className="flex flex-col items-center justify-center gap-y-4 md:gap-y-9"
@@ -82,7 +129,7 @@ export default function Home() {
               <h4 className="text-center">{step.para}</h4>
             </div>
           ))}
-        </div>
+        </div> */}
       </section>
 
       <section className="pb-20">
