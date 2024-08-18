@@ -3,6 +3,7 @@ import Link from "next/link";
 import Posts from "./components/Posts";
 import Services from "./components/Services";
 import HeroSection from "./components/HeroSection";
+import VideoOnView from "./components/VideoOnView";
 
 export const revalidate = 10;
 
@@ -69,11 +70,7 @@ export default function Home() {
           The BluePrint To Success
         </h2>
 
-        <video
-          autoPlay={true}
-          className="m-auto h-[90%] w-[90%]"
-          src="/process-vid.mp4"
-        ></video>
+        <VideoOnView src="/process-vid.mp4" />
 
         {/* <div className="circle-container">
           <svg
