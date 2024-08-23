@@ -131,7 +131,9 @@ export default function Home() {
 
       <section className="pb-20">
         <div className="mb-6 flex flex-row items-center justify-between">
-          <h2 className="text-3xl font-semibold md:text-4xl">Our Insights</h2>
+          <h2 className="text-3xl font-semibold md:text-4xl">
+            Tips and Tricks
+          </h2>
 
           <Link href={"/blog"}>
             <button className="transition hover:scale-105">All Articles</button>
